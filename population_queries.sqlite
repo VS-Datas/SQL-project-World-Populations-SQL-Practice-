@@ -1,0 +1,45 @@
+-- This is the first query:
+
+SELECT DISTINCT year 
+from population_years;
+
+SELECT COUNT(year)
+FROM population_years;
+
+SELECT MAX(population)
+FROM population_years
+WHERE country = 'Gabon'
+GROUP BY year;
+
+SELECT MIN(population), country
+FROM population_years
+WHERE year = 2005
+GROUP BY country
+LIMIT 10;
+
+SELECT DISTINCT country
+FROM population_years
+WHERE population > 100 and year = 2010;
+
+SELECT DISTINCT country
+FROM population_years
+WHERE country LIKE '%Islands%';
+
+SELECT population, year
+FROM population_years
+WHERE country = 'Indonesia' 
+AND year = 2000
+OR country = 'Indonesia'
+AND year = 2010;
+
+
+
+
+
+
+
+
+
+
+
+
